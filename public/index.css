@@ -1,0 +1,59 @@
+@font-face {
+    font-family: "Yeseva One";
+    src: url("fonts/YesevaOne-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: "Yeseva One", sans-serif;
+}
+
+header {
+    height: 150px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+
+.logo {
+    height: 100px;
+    width: auto;
+}
+
+.nav__list {
+    list-style-type: none;
+    display: flex;
+}
+
+.nav__el {
+    margin-right: 1rem;
+    font-size: 1.3rem;
+}
+
+.nav__link {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.nav__link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease-out;
+}
+
+.nav__link:hover::after {
+    transform: scaleX(1);
+}
