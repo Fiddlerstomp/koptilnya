@@ -7,16 +7,658 @@
 </head>
 <body>
 <header>
-    <img class="logo" src="img/logo.png" alt="Логотип Коптильня" />
+    <img class="logo" src="img/logo.png" alt="Логотип Коптильня"/>
     <nav>
         <ul class="nav__list">
             <li class="nav__el"><a class="nav__link">О нас</a></li>
-            <li class="nav__el"><a class="nav__link">Акции</a></li>
-            <li class="nav__el"><a class="nav__link">Меню</a></li>
-            <li class="nav__el"><a class="nav__link">Бронь</a></li>
+            <li class="nav__el"><a class="nav__link" href="#discounts">Акции</a></li>
+            <li class="nav__el"><a class="nav__link" href="#menu">Меню</a></li>
+            <li class="nav__el"><a class="nav__link" href="#book__form">Бронь</a></li>
             <li class="nav__el"><a class="nav__link">Контакты</a></li>
         </ul>
     </nav>
 </header>
+<section id="about">
+    <div class="gallery__div">
+        <div class="slide fade sl">
+            <div class="slide__number">1 / 4</div>
+            <img src="img/header/head1.jpg" alt="Фото ресторана" style="width: 100%">
+        </div>
+        <div class="slide fade sl">
+            <div class="slide__number">2 / 4</div>
+            <img src="img/header/head2.jpg" alt="Фото ресторана" style="width: 100%">
+        </div>
+        <div class="slide fade sl">
+            <div class="slide__number">3 / 4</div>
+            <img src="img/header/head3.jpg" alt="Фото ресторана" style="width: 100%">
+        </div>
+        <div class="slide fade sl">
+            <div class="slide__number">4 / 4</div>
+            <img src="img/header/head4.jpg" alt="Фото ресторана" style="width: 100%">
+        </div>
+        <a class="prev gallery__button">&#10094;</a>
+        <a class="next gallery__button">&#10095;</a>
+        <div id="dot-wrapper" style="text-align:center">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
+
+    <div class="about__div">
+        <div class="about__wrapper">
+            <div class="about__head">
+                <h1>Коптильня</h1>
+                <h3>техасский барбекю</h3>
+            </div>
+            <div class="about__main">
+                <p>Ресторан с концепцией тотального барбекю с собственной коптильней. Мы приручили огонь и дым, а теперь
+                    хотим поделиться новыми вкусами и ароматами с жителями Минска.</p>
+                <p>Коптим, жарим, томим - основополагающие понятия на нашей кухне! Среди специалитетов - техасский
+                    брискет (говяжья грудинка), который коптится 12-14 часов в натуральном дыму и ребрышки BBQ с
+                    6-часовым копчением, цыпленок BBQ, куриные "Чупа Чупсы", рваная свинина в лучших традициях юга США,
+                    конечно же бургеры и лучшие стейки.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="discounts">
+    <div class="headers__wrapper">
+        <h3>Новости, предложения и акции</h3>
+    </div>
+    <div class="discounts__grid">
+        <div class="discounts__card" id="card__1">
+            <div class="card__main">
+                <img src="img/discounts/card_1.jpg" alt="Гастрофест"/>
+                <div class="card__header__wrapper">
+                    <h4>ГАСТРОФЕСТ. Страны мира<br> - ТЕХАС, США</h4>
+                </div>
+            </div>
+            <div class="card__description">
+                <h5>Фестивальный сет за 47 byn</h5>
+                <p>Настоящая техасская кухня с тако, пинцей с Чоризо и копченой вишней, супом Чаудер, мак-н-чизом с
+                    пуллд биф, чили кон карне и маринадами</p>
+            </div>
+        </div>
+        <div class="discounts__card" id="card__2">
+            <div class="card__main">
+                <img src="img/discounts/card_2.png" alt="Гастрофест"/>
+                <div class="card__header__wrapper">
+                    <h4>LIVE<br>MUSIC</h4>
+                </div>
+            </div>
+            <div class="card__description">
+                <h5>ЖИВАЯ МУЗЫКА</h5>
+                <p>Выступление лучших кавер-бэндов Минска на сцене нашего ресторана по пятницам и субботам! Вход
+                    свободный</p>
+            </div>
+        </div>
+        <div class="discounts__card" id="card__3">
+            <div class="card__main">
+                <img src="img/discounts/card_3.jpeg" alt="Гастрофест"/>
+                <div class="card__description">
+                    <h5>СТЕЙКИ ПО ПОНЕДЕЛЬНИКАМ</h5>
+                    <p>Готовим крутые альтернативные стейки по понедельникам - два стейка по цене одного!</p>
+                </div>
+            </div>
+        </div>
+        <div class="discounts__card" id="card__4">
+            <div class="card__main">
+                <img src="img/discounts/card_4.png" alt="Гастрофест"/>
+            </div>
+            <div class="card__description">
+                <h5>ВТОРНИК - ДЕНЬ КРЫЛЫШЕК!</h5>
+                <p>Каждая вторая порция копченых крылышек в подарок!</p>
+            </div>
+        </div>
+        <div class="discounts__card" id="card__5">
+            <div class="card__main">
+                <img src="img/discounts/card_5.jpeg" alt="Гастрофест"/>
+            </div>
+            <div class="card__description">
+                <h5>СРЕДА - ДЕНЬ БУРГЕРОВ</h5>
+                <p>Готовим Пуллд Порк Бургер по средам по акции и дарим каждый второй в подарок!</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+<section id="menu">
+    <div class="headers__wrapper">
+        <h3>Меню</h3>
+    </div>
+    <div id="menu__buttons__wrapper">
+        <a href="#day-discounts">
+            <button class="menu__buttons">Акции дня</button>
+        </a>
+        <a href="#snacks">
+            <button class="menu__buttons">Закуски</button>
+        </a>
+        <a href="#koptilnya-menu">
+            <button class="menu__buttons">Коптильня</button>
+        </a>
+        <a href="#steaks">
+            <button class="menu__buttons">Стейки</button>
+        </a>
+        <a href="#burgers">
+            <button class="menu__buttons">Бургеры</button>
+        </a>
+        <a href="#soups">
+            <button class="menu__buttons">Супы</button>
+        </a>
+        <a href="#dessert">
+            <button class="menu__buttons">Десерты</button>
+        </a>
+        <a href="#side-dishes">
+            <button class="menu__buttons">Гарниры</button>
+        </a>
+        <a href="#sauces">
+            <button class="menu__buttons">Соусы</button>
+        </a>
+        <a href="#drinks">
+            <button class="menu__buttons">Напитки</button>
+        </a>
+    </div>
+    <div class="menu__grid">
+        <div class="menu__section" id="day-discounts">
+            <h3>Акции дня</h3>
+            <div class="menu__section__grid">
+                <div class="menu__card">
+                    <img src="img/menu/actions_1.jpg" alt="Два бургера">
+                    <div class="card__description">
+                        <h5>ПОНЕДЕЛЬНИК - ДЕНЬ АЛЬТЕРНАТИВНЫХ СТЕЙКОВ</h5>
+                        <p>Каждый второй стейк бесплатно! Готовим мраморные стейки от Мираторг по прекрасной цене. Два стейка по цене одного</p>
+                        <p class="card__info"><span class="price__span">52 р. </span><span
+                                class="weight__span">/ 300 g</span></p>
+                    </div>
+                </div>
+                <div class="menu__card">
+                    <img src="img/menu/actions_2.jpg" alt="Два бургера">
+                    <div class="card__description">
+                        <h5>СРЕДА - ДВА БУРГЕРА ПО ЦЕНЕ ОДНОГО</h5>
+                        <p>Два наших фирменных бургера Pulled Pork с рваной свининой из коптильни, салатом Коул слоу,
+                            сыром Моцарелла, маринованным луком, клюквенным соусом и огурцом</p>
+                        <p class="card__info"><span class="price__span">26 р. </span><span
+                                class="weight__span">/ 600 g</span></p>
+                    </div>
+                </div>
+                <div class="menu__card">
+                    <img src="img/menu/actions_3.jpg" alt="Два бургера">
+                    <div class="card__description">
+                        <h5>СРЕДА - ДВА БУРГЕРА ПО ЦЕНЕ ОДНОГО</h5>
+                        <p>Два наших фирменных бургера Pulled Pork с рваной свининой из коптильни, салатом Коул слоу,
+                            сыром Моцарелла, маринованным луком, клюквенным соусом и огурцом</p>
+                        <p class="card__info"><span class="price__span">26 р. </span><span
+                                class="weight__span">/ 600 g</span></p>
+                    </div>
+                </div>
+                <div class="menu__card">
+                    <img src="img/menu/actions_3.jpg" alt="Два бургера">
+                    <div class="card__description">
+                        <h5>СРЕДА - ДВА БУРГЕРА ПО ЦЕНЕ ОДНОГО</h5>
+                        <p>Два наших фирменных бургера Pulled Pork с рваной свининой из коптильни, салатом Коул слоу,
+                            сыром Моцарелла, маринованным луком, клюквенным соусом и огурцом</p>
+                        <p class="card__info"><span class="price__span">26 р. </span><span
+                                class="weight__span">/ 600 g</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="menu__section" id="snacks">
+            <h3>Закуски</h3>
+            <div class="menu__section__grid">
+                <div class="menu__card">
+                    <img src="img/menu/actions_1.jpg" alt="Два бургера">
+                    <div class="card__description">
+                        <h5>СРЕДА - ДВА БУРГЕРА ПО ЦЕНЕ ОДНОГО</h5>
+                        <p>Два наших фирменных бургера Pulled Pork с рваной свининой из коптильни, салатом Коул слоу,
+                            сыром Моцарелла, маринованным луком, клюквенным соусом и огурцом</p>
+                        <p class="card__info"><span class="price__span">26 р. </span><span
+                                class="weight__span">/ 600 g</span></p>
+                    </div>
+                </div>
+                <div class="menu__card">
+                    <img src="img/menu/actions_2.jpg" alt="Два бургера">
+                    <div class="card__description">
+                        <h5>СРЕДА - ДВА БУРГЕРА ПО ЦЕНЕ ОДНОГО</h5>
+                        <p>Два наших фирменных бургера Pulled Pork с рваной свининой из коптильни, салатом Коул слоу,
+                            сыром Моцарелла, маринованным луком, клюквенным соусом и огурцом</p>
+                        <p class="card__info"><span class="price__span">26 р. </span><span
+                                class="weight__span">/ 600 g</span></p>
+                    </div>
+                </div>
+                <div class="menu__card">
+                    <img src="img/menu/actions_3.jpg" alt="Два бургера">
+                    <div class="card__description">
+                        <h5>СРЕДА - ДВА БУРГЕРА ПО ЦЕНЕ ОДНОГО</h5>
+                        <p>Два наших фирменных бургера Pulled Pork с рваной свининой из коптильни, салатом Коул слоу,
+                            сыром Моцарелла, маринованным луком, клюквенным соусом и огурцом</p>
+                        <p class="card__info"><span class="price__span">26 р. </span><span
+                                class="weight__span">/ 600 g</span></p>
+                    </div>
+                </div>
+                <div class="menu__card">
+                    <img src="img/menu/actions_3.jpg" alt="Два бургера">
+                    <div class="card__description">
+                        <h5>СРЕДА - ДВА БУРГЕРА ПО ЦЕНЕ ОДНОГО</h5>
+                        <p>Два наших фирменных бургера Pulled Pork с рваной свининой из коптильни, салатом Коул слоу,
+                            сыром Моцарелла, маринованным луком, клюквенным соусом и огурцом</p>
+                        <p class="card__info"><span class="price__span">26 р. </span><span
+                                class="weight__span">/ 600 g</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="menu__section" id="koptilnya-menu">
+            <h3>Коптильня</h3>
+            <div class="menu__section__grid">
+                <div class="menu__card">
+                    <img src="img/menu/actions_1.jpg" alt="Два бургера">
+                    <div class="card__description">
+                        <h5>СРЕДА - ДВА БУРГЕРА ПО ЦЕНЕ ОДНОГО</h5>
+                        <p>Два наших фирменных бургера Pulled Pork с рваной свининой из коптильни, салатом Коул слоу,
+                            сыром Моцарелла, маринованным луком, клюквенным соусом и огурцом</p>
+                        <p class="card__info"><span class="price__span">26 р. </span><span
+                                class="weight__span">/ 600 g</span></p>
+                    </div>
+                </div>
+                <div class="menu__card">
+                    <img src="img/menu/actions_2.jpg" alt="Два бургера">
+                    <div class="card__description">
+                        <h5>СРЕДА - ДВА БУРГЕРА ПО ЦЕНЕ ОДНОГО</h5>
+                        <p>Два наших фирменных бургера Pulled Pork с рваной свининой из коптильни, салатом Коул слоу,
+                            сыром Моцарелла, маринованным луком, клюквенным соусом и огурцом</p>
+                        <p class="card__info"><span class="price__span">26 р. </span><span
+                                class="weight__span">/ 600 g</span></p>
+                    </div>
+                </div>
+                <div class="menu__card">
+                    <img src="img/menu/actions_3.jpg" alt="Два бургера">
+                    <div class="card__description">
+                        <h5>СРЕДА - ДВА БУРГЕРА ПО ЦЕНЕ ОДНОГО</h5>
+                        <p>Два наших фирменных бургера Pulled Pork с рваной свининой из коптильни, салатом Коул слоу,
+                            сыром Моцарелла, маринованным луком, клюквенным соусом и огурцом</p>
+                        <p class="card__info"><span class="price__span">26 р. </span><span
+                                class="weight__span">/ 600 g</span></p>
+                    </div>
+                </div>
+                <div class="menu__card">
+                    <img src="img/menu/actions_3.jpg" alt="Два бургера">
+                    <div class="card__description">
+                        <h5>СРЕДА - ДВА БУРГЕРА ПО ЦЕНЕ ОДНОГО</h5>
+                        <p>Два наших фирменных бургера Pulled Pork с рваной свининой из коптильни, салатом Коул слоу,
+                            сыром Моцарелла, маринованным луком, клюквенным соусом и огурцом</p>
+                        <p class="card__info"><span class="price__span">26 р. </span><span
+                                class="weight__span">/ 600 g</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="menu__section" id="steaks">
+            <h3>Стейки</h3>
+            <div class="menu__section__grid">
+                <div class="menu__card">
+                    <img src="img/menu/actions_1.jpg" alt="Два бургера">
+                    <div class="card__description">
+                        <h5>СРЕДА - ДВА БУРГЕРА ПО ЦЕНЕ ОДНОГО</h5>
+                        <p>Два наших фирменных бургера Pulled Pork с рваной свининой из коптильни, салатом Коул слоу,
+                            сыром Моцарелла, маринованным луком, клюквенным соусом и огурцом</p>
+                        <p class="card__info"><span class="price__span">26 р. </span><span
+                                class="weight__span">/ 600 g</span></p>
+                    </div>
+                </div>
+                <div class="menu__card">
+                    <img src="img/menu/actions_2.jpg" alt="Два бургера">
+                    <div class="card__description">
+                        <h5>СРЕДА - ДВА БУРГЕРА ПО ЦЕНЕ ОДНОГО</h5>
+                        <p>Два наших фирменных бургера Pulled Pork с рваной свининой из коптильни, салатом Коул слоу,
+                            сыром Моцарелла, маринованным луком, клюквенным соусом и огурцом</p>
+                        <p class="card__info"><span class="price__span">26 р. </span><span
+                                class="weight__span">/ 600 g</span></p>
+                    </div>
+                </div>
+                <div class="menu__card">
+                    <img src="img/menu/actions_3.jpg" alt="Два бургера">
+                    <div class="card__description">
+                        <h5>СРЕДА - ДВА БУРГЕРА ПО ЦЕНЕ ОДНОГО</h5>
+                        <p>Два наших фирменных бургера Pulled Pork с рваной свининой из коптильни, салатом Коул слоу,
+                            сыром Моцарелла, маринованным луком, клюквенным соусом и огурцом</p>
+                        <p class="card__info"><span class="price__span">26 р. </span><span
+                                class="weight__span">/ 600 g</span></p>
+                    </div>
+                </div>
+                <div class="menu__card">
+                    <img src="img/menu/actions_3.jpg" alt="Два бургера">
+                    <div class="card__description">
+                        <h5>СРЕДА - ДВА БУРГЕРА ПО ЦЕНЕ ОДНОГО</h5>
+                        <p>Два наших фирменных бургера Pulled Pork с рваной свининой из коптильни, салатом Коул слоу,
+                            сыром Моцарелла, маринованным луком, клюквенным соусом и огурцом</p>
+                        <p class="card__info"><span class="price__span">26 р. </span><span
+                                class="weight__span">/ 600 g</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="menu__section" id="burgers">
+            <h3>Бургеры</h3>
+            <div class="menu__section__grid">
+                <div class="menu__card">
+                    <img src="img/menu/actions_1.jpg" alt="Два бургера">
+                    <div class="card__description">
+                        <h5>СРЕДА - ДВА БУРГЕРА ПО ЦЕНЕ ОДНОГО</h5>
+                        <p>Два наших фирменных бургера Pulled Pork с рваной свининой из коптильни, салатом Коул слоу,
+                            сыром Моцарелла, маринованным луком, клюквенным соусом и огурцом</p>
+                        <p class="card__info"><span class="price__span">26 р. </span><span
+                                class="weight__span">/ 600 g</span></p>
+                    </div>
+                </div>
+                <div class="menu__card">
+                    <img src="img/menu/actions_2.jpg" alt="Два бургера">
+                    <div class="card__description">
+                        <h5>СРЕДА - ДВА БУРГЕРА ПО ЦЕНЕ ОДНОГО</h5>
+                        <p>Два наших фирменных бургера Pulled Pork с рваной свининой из коптильни, салатом Коул слоу,
+                            сыром Моцарелла, маринованным луком, клюквенным соусом и огурцом</p>
+                        <p class="card__info"><span class="price__span">26 р. </span><span
+                                class="weight__span">/ 600 g</span></p>
+                    </div>
+                </div>
+                <div class="menu__card">
+                    <img src="img/menu/actions_3.jpg" alt="Два бургера">
+                    <div class="card__description">
+                        <h5>СРЕДА - ДВА БУРГЕРА ПО ЦЕНЕ ОДНОГО</h5>
+                        <p>Два наших фирменных бургера Pulled Pork с рваной свининой из коптильни, салатом Коул слоу,
+                            сыром Моцарелла, маринованным луком, клюквенным соусом и огурцом</p>
+                        <p class="card__info"><span class="price__span">26 р. </span><span
+                                class="weight__span">/ 600 g</span></p>
+                    </div>
+                </div>
+                <div class="menu__card">
+                    <img src="img/menu/actions_3.jpg" alt="Два бургера">
+                    <div class="card__description">
+                        <h5>СРЕДА - ДВА БУРГЕРА ПО ЦЕНЕ ОДНОГО</h5>
+                        <p>Два наших фирменных бургера Pulled Pork с рваной свининой из коптильни, салатом Коул слоу,
+                            сыром Моцарелла, маринованным луком, клюквенным соусом и огурцом</p>
+                        <p class="card__info"><span class="price__span">26 р. </span><span
+                                class="weight__span">/ 600 g</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="menu__section" id="soups">
+            <h3>Супы</h3>
+            <div class="menu__section__grid">
+                <div class="menu__card">
+                    <img src="img/menu/actions_1.jpg" alt="Два бургера">
+                    <div class="card__description">
+                        <h5>СРЕДА - ДВА БУРГЕРА ПО ЦЕНЕ ОДНОГО</h5>
+                        <p>Два наших фирменных бургера Pulled Pork с рваной свининой из коптильни, салатом Коул слоу,
+                            сыром Моцарелла, маринованным луком, клюквенным соусом и огурцом</p>
+                        <p class="card__info"><span class="price__span">26 р. </span><span
+                                class="weight__span">/ 600 g</span></p>
+                    </div>
+                </div>
+                <div class="menu__card">
+                    <img src="img/menu/actions_2.jpg" alt="Два бургера">
+                    <div class="card__description">
+                        <h5>СРЕДА - ДВА БУРГЕРА ПО ЦЕНЕ ОДНОГО</h5>
+                        <p>Два наших фирменных бургера Pulled Pork с рваной свининой из коптильни, салатом Коул слоу,
+                            сыром Моцарелла, маринованным луком, клюквенным соусом и огурцом</p>
+                        <p class="card__info"><span class="price__span">26 р. </span><span
+                                class="weight__span">/ 600 g</span></p>
+                    </div>
+                </div>
+                <div class="menu__card">
+                    <img src="img/menu/actions_3.jpg" alt="Два бургера">
+                    <div class="card__description">
+                        <h5>СРЕДА - ДВА БУРГЕРА ПО ЦЕНЕ ОДНОГО</h5>
+                        <p>Два наших фирменных бургера Pulled Pork с рваной свининой из коптильни, салатом Коул слоу,
+                            сыром Моцарелла, маринованным луком, клюквенным соусом и огурцом</p>
+                        <p class="card__info"><span class="price__span">26 р. </span><span
+                                class="weight__span">/ 600 g</span></p>
+                    </div>
+                </div>
+                <div class="menu__card">
+                    <img src="img/menu/actions_3.jpg" alt="Два бургера">
+                    <div class="card__description">
+                        <h5>СРЕДА - ДВА БУРГЕРА ПО ЦЕНЕ ОДНОГО</h5>
+                        <p>Два наших фирменных бургера Pulled Pork с рваной свининой из коптильни, салатом Коул слоу,
+                            сыром Моцарелла, маринованным луком, клюквенным соусом и огурцом</p>
+                        <p class="card__info"><span class="price__span">26 р. </span><span
+                                class="weight__span">/ 600 g</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="menu__section" id="dessert">
+            <h3>Десерты</h3>
+            <div class="menu__section__grid">
+                <div class="menu__card">
+                    <img src="img/menu/actions_1.jpg" alt="Два бургера">
+                    <div class="card__description">
+                        <h5>СРЕДА - ДВА БУРГЕРА ПО ЦЕНЕ ОДНОГО</h5>
+                        <p>Два наших фирменных бургера Pulled Pork с рваной свининой из коптильни, салатом Коул слоу,
+                            сыром Моцарелла, маринованным луком, клюквенным соусом и огурцом</p>
+                        <p class="card__info"><span class="price__span">26 р. </span><span
+                                class="weight__span">/ 600 g</span></p>
+                    </div>
+                </div>
+                <div class="menu__card">
+                    <img src="img/menu/actions_2.jpg" alt="Два бургера">
+                    <div class="card__description">
+                        <h5>СРЕДА - ДВА БУРГЕРА ПО ЦЕНЕ ОДНОГО</h5>
+                        <p>Два наших фирменных бургера Pulled Pork с рваной свининой из коптильни, салатом Коул слоу,
+                            сыром Моцарелла, маринованным луком, клюквенным соусом и огурцом</p>
+                        <p class="card__info"><span class="price__span">26 р. </span><span
+                                class="weight__span">/ 600 g</span></p>
+                    </div>
+                </div>
+                <div class="menu__card">
+                    <img src="img/menu/actions_3.jpg" alt="Два бургера">
+                    <div class="card__description">
+                        <h5>СРЕДА - ДВА БУРГЕРА ПО ЦЕНЕ ОДНОГО</h5>
+                        <p>Два наших фирменных бургера Pulled Pork с рваной свининой из коптильни, салатом Коул слоу,
+                            сыром Моцарелла, маринованным луком, клюквенным соусом и огурцом</p>
+                        <p class="card__info"><span class="price__span">26 р. </span><span
+                                class="weight__span">/ 600 g</span></p>
+                    </div>
+                </div>
+                <div class="menu__card">
+                    <img src="img/menu/actions_3.jpg" alt="Два бургера">
+                    <div class="card__description">
+                        <h5>СРЕДА - ДВА БУРГЕРА ПО ЦЕНЕ ОДНОГО</h5>
+                        <p>Два наших фирменных бургера Pulled Pork с рваной свининой из коптильни, салатом Коул слоу,
+                            сыром Моцарелла, маринованным луком, клюквенным соусом и огурцом</p>
+                        <p class="card__info"><span class="price__span">26 р. </span><span
+                                class="weight__span">/ 600 g</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="menu__section" id="side-dishes">
+            <h3>Гарниры</h3>
+            <div class="menu__section__grid">
+                <div class="menu__card">
+                    <img src="img/menu/actions_1.jpg" alt="Два бургера">
+                    <div class="card__description">
+                        <h5>СРЕДА - ДВА БУРГЕРА ПО ЦЕНЕ ОДНОГО</h5>
+                        <p>Два наших фирменных бургера Pulled Pork с рваной свининой из коптильни, салатом Коул слоу,
+                            сыром Моцарелла, маринованным луком, клюквенным соусом и огурцом</p>
+                        <p class="card__info"><span class="price__span">26 р. </span><span
+                                class="weight__span">/ 600 g</span></p>
+                    </div>
+                </div>
+                <div class="menu__card">
+                    <img src="img/menu/actions_2.jpg" alt="Два бургера">
+                    <div class="card__description">
+                        <h5>СРЕДА - ДВА БУРГЕРА ПО ЦЕНЕ ОДНОГО</h5>
+                        <p>Два наших фирменных бургера Pulled Pork с рваной свининой из коптильни, салатом Коул слоу,
+                            сыром Моцарелла, маринованным луком, клюквенным соусом и огурцом</p>
+                        <p class="card__info"><span class="price__span">26 р. </span><span
+                                class="weight__span">/ 600 g</span></p>
+                    </div>
+                </div>
+                <div class="menu__card">
+                    <img src="img/menu/actions_3.jpg" alt="Два бургера">
+                    <div class="card__description">
+                        <h5>СРЕДА - ДВА БУРГЕРА ПО ЦЕНЕ ОДНОГО</h5>
+                        <p>Два наших фирменных бургера Pulled Pork с рваной свининой из коптильни, салатом Коул слоу,
+                            сыром Моцарелла, маринованным луком, клюквенным соусом и огурцом</p>
+                        <p class="card__info"><span class="price__span">26 р. </span><span
+                                class="weight__span">/ 600 g</span></p>
+                    </div>
+                </div>
+                <div class="menu__card">
+                    <img src="img/menu/actions_3.jpg" alt="Два бургера">
+                    <div class="card__description">
+                        <h5>СРЕДА - ДВА БУРГЕРА ПО ЦЕНЕ ОДНОГО</h5>
+                        <p>Два наших фирменных бургера Pulled Pork с рваной свининой из коптильни, салатом Коул слоу,
+                            сыром Моцарелла, маринованным луком, клюквенным соусом и огурцом</p>
+                        <p class="card__info"><span class="price__span">26 р. </span><span
+                                class="weight__span">/ 600 g</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="menu__section" id="sauces">
+            <h3>Соусы</h3>
+            <div class="menu__section__grid">
+                <div class="menu__card">
+                    <img src="img/menu/actions_1.jpg" alt="Два бургера">
+                    <div class="card__description">
+                        <h5>СРЕДА - ДВА БУРГЕРА ПО ЦЕНЕ ОДНОГО</h5>
+                        <p>Два наших фирменных бургера Pulled Pork с рваной свининой из коптильни, салатом Коул слоу,
+                            сыром Моцарелла, маринованным луком, клюквенным соусом и огурцом</p>
+                        <p class="card__info"><span class="price__span">26 р. </span><span
+                                class="weight__span">/ 600 g</span></p>
+                    </div>
+                </div>
+                <div class="menu__card">
+                    <img src="img/menu/actions_2.jpg" alt="Два бургера">
+                    <div class="card__description">
+                        <h5>СРЕДА - ДВА БУРГЕРА ПО ЦЕНЕ ОДНОГО</h5>
+                        <p>Два наших фирменных бургера Pulled Pork с рваной свининой из коптильни, салатом Коул слоу,
+                            сыром Моцарелла, маринованным луком, клюквенным соусом и огурцом</p>
+                        <p class="card__info"><span class="price__span">26 р. </span><span
+                                class="weight__span">/ 600 g</span></p>
+                    </div>
+                </div>
+                <div class="menu__card">
+                    <img src="img/menu/actions_3.jpg" alt="Два бургера">
+                    <div class="card__description">
+                        <h5>СРЕДА - ДВА БУРГЕРА ПО ЦЕНЕ ОДНОГО</h5>
+                        <p>Два наших фирменных бургера Pulled Pork с рваной свининой из коптильни, салатом Коул слоу,
+                            сыром Моцарелла, маринованным луком, клюквенным соусом и огурцом</p>
+                        <p class="card__info"><span class="price__span">26 р. </span><span
+                                class="weight__span">/ 600 g</span></p>
+                    </div>
+                </div>
+                <div class="menu__card">
+                    <img src="img/menu/actions_3.jpg" alt="Два бургера">
+                    <div class="card__description">
+                        <h5>СРЕДА - ДВА БУРГЕРА ПО ЦЕНЕ ОДНОГО</h5>
+                        <p>Два наших фирменных бургера Pulled Pork с рваной свининой из коптильни, салатом Коул слоу,
+                            сыром Моцарелла, маринованным луком, клюквенным соусом и огурцом</p>
+                        <p class="card__info"><span class="price__span">26 р. </span><span
+                                class="weight__span">/ 600 g</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="menu__section" id="drinks">
+            <h3>Напитки</h3>
+            <div class="menu__section__grid">
+                <div class="menu__card">
+                    <img src="img/menu/actions_1.jpg" alt="Два бургера">
+                    <div class="card__description">
+                        <h5>СРЕДА - ДВА БУРГЕРА ПО ЦЕНЕ ОДНОГО</h5>
+                        <p>Два наших фирменных бургера Pulled Pork с рваной свининой из коптильни, салатом Коул слоу,
+                            сыром Моцарелла, маринованным луком, клюквенным соусом и огурцом</p>
+                        <p class="card__info"><span class="price__span">26 р. </span><span
+                                class="weight__span">/ 600 g</span></p>
+                    </div>
+                </div>
+                <div class="menu__card">
+                    <img src="img/menu/actions_2.jpg" alt="Два бургера">
+                    <div class="card__description">
+                        <h5>СРЕДА - ДВА БУРГЕРА ПО ЦЕНЕ ОДНОГО</h5>
+                        <p>Два наших фирменных бургера Pulled Pork с рваной свининой из коптильни, салатом Коул слоу,
+                            сыром Моцарелла, маринованным луком, клюквенным соусом и огурцом</p>
+                        <p class="card__info"><span class="price__span">26 р. </span><span
+                                class="weight__span">/ 600 g</span></p>
+                    </div>
+                </div>
+                <div class="menu__card">
+                    <img src="img/menu/actions_3.jpg" alt="Два бургера">
+                    <div class="card__description">
+                        <h5>СРЕДА - ДВА БУРГЕРА ПО ЦЕНЕ ОДНОГО</h5>
+                        <p>Два наших фирменных бургера Pulled Pork с рваной свининой из коптильни, салатом Коул слоу,
+                            сыром Моцарелла, маринованным луком, клюквенным соусом и огурцом</p>
+                        <p class="card__info"><span class="price__span">26 р. </span><span
+                                class="weight__span">/ 600 g</span></p>
+                    </div>
+                </div>
+                <div class="menu__card">
+                    <img src="img/menu/actions_3.jpg" alt="Два бургера">
+                    <div class="card__description">
+                        <h5>СРЕДА - ДВА БУРГЕРА ПО ЦЕНЕ ОДНОГО</h5>
+                        <p>Два наших фирменных бургера Pulled Pork с рваной свининой из коптильни, салатом Коул слоу,
+                            сыром Моцарелла, маринованным луком, клюквенным соусом и огурцом</p>
+                        <p class="card__info"><span class="price__span">26 р. </span><span
+                                class="weight__span">/ 600 g</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="book__form">
+    <div id="book__header">
+        <div class="headers__wrapper">
+            <h3>Забронировать стол</h3>
+        </div>
+    </div>
+    <div id="form__wrapper">
+        <form>
+            <div class="form__row">
+                <label for="fname">Имя</label>
+                <input type="text" id="fname" name="firstname" placeholder="Ваше имя">
+            </div>
+            <div class="form__row">
+                <label for="lname">Фамилия</label>
+                <input type="text" id="lname" name="lastname" placeholder="Ваша фамилия">
+            </div>
+            <div class="form__row">
+                <label for="phone">Номер телефона</label>
+                <input type="tel" id="phone" name="phone-number" placeholder="Ваш телефон">
+            </div>
+            <div class="form__row">
+                <label for="book-date">На какую дату</label>
+                <input type="datetime-local" id="book-date" name="book-date">
+            </div>
+            <div class="form__row">
+                <!--                <label for="guests-number">Количество гостей</label>-->
+                <!--                <input type="number" id="guests-number" name="guests-number">-->
+                <p>Количество гостей</p>
+                <div id="guests-wrapper">
+                    <img class="guest" src="icons/book-people-white.png" alt="гость">
+                    <img class="guest" src="icons/book-people-white.png" alt="гость">
+                    <img class="guest" src="icons/book-people-white.png" alt="гость">
+                    <img class="guest" src="icons/book-people-white.png" alt="гость">
+                    <img class="guest" src="icons/book-people-white.png" alt="гость">
+                    <img class="guest" src="icons/book-people-white.png" alt="гость">
+                    <img class="guest" src="icons/book-people-white.png" alt="гость">
+                    <img class="guest" src="icons/book-people-white.png" alt="гость">
+                    <img class="guest" src="icons/book-people-white.png" alt="гость">
+                    <img class="guest" src="icons/book-people-white.png" alt="гость">
+                </div>
+            </div>
+            <div id="submit-wrapper">
+                <input type="submit" id="book-submit" value="Забронировать">
+            </div>
+        </form>
+    </div>
+</section>
 </body>
+<script src="script.js"></script>
 </html>
