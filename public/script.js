@@ -100,28 +100,27 @@ window.addEventListener("scroll", () => {
 
 //active header
 
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', () => {
     let sections = document.querySelectorAll('section');
     let navLinks = document.querySelectorAll('nav a');
-
-    sections.forEach(function(section) {
+    sections.forEach(section => {
         let top = section.offsetTop - 400;
         let bottom = top + section.offsetHeight;
         const isDown = (window.innerHeight + window.scrollY) >= document.body.offsetHeight;
 
         if (window.scrollY >= top && window.scrollY <= bottom && !isDown) {
-            navLinks.forEach(function(link) {
+            navLinks.forEach(link => {
                 link.classList.remove('active-link');
             });
 
             let link = document.querySelector('nav a[href="#' + section.id + '"]');
             link.classList.add('active-link');
         } else if (isDown) {
-            navLinks.forEach(function(link) {
+            navLinks.forEach(link => {
                 link.classList.remove('active-link');
             });
 
-            let link = document.querySelector('nav a[href="#footer-wrapper"]');
+            let link = document.querySelector('nav a[href="#footer"]');
             link.classList.add('active-link');
         }
     });
