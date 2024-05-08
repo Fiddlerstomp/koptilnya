@@ -103,7 +103,7 @@ function checkForm() {
         createErrorValidation("phone");
         return false;
     } else if (!checkPhone(document.querySelector("#phone").value)) {
-        alert("Введите корректный номер телефона (+375XXYYYYYYY)");
+        createErrorValidation("phoneNum");
         return false;
     }
     if (document.querySelector("#book-date").value === "") {
@@ -123,10 +123,20 @@ function checkPhone(phone) {
 }
 
 function createErrorValidation(row) {
+    if (isError) {
+        return;
+    }
+    let rowName = row;
     const errorElement = document.createElement("p");
     errorElement.classList.add("error");
-    errorElement.textContent = "Укажите это поле";
-    document.querySelector(`#${row}-div`).appendChild(errorElement);
+    if (row === "phoneNum") {
+        errorElement.textContent = "Введите корректный номер телефона (+375XXYYYYYYY)";
+        rowName = "phone";
+    } else {
+        errorElement.textContent = "Укажите это поле";
+    }
+    document.querySelector(`#${rowName}-div`).appendChild(errorElement);
+    document.querySelector(`#${rowName}`).classList.add("error-input");
     isError = true;
 }
 
@@ -134,6 +144,9 @@ function removeError(e) {
     console.log("remove")
     if (isError) {
         e.target.parentNode.removeChild(document.querySelector(`.error`));
+        formInputs.forEach(input => {
+            input.classList.remove("error-input");
+        })
         isError = false;
     }
 }
