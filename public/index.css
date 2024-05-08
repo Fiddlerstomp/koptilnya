@@ -407,3 +407,35 @@ header.shrink {
 }
 
 /* BOOK END */
+
+/* FOOTER START */
+
+footer {
+    background-color: #000000;
+    height: 18rem;
+    width: 100%;
+    color: #ffffff;
+}
+
+#footer-wrapper {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 3rem;
+}
+
+#footer-legal > p {
+    margin-top: 1rem;
+}
+
+#footer-info > div {
+    margin-top: 1rem;
+}
+
+#footer-info > div > a {
+    color: #ffffff;
+}
+
+/* FOOTER END */
