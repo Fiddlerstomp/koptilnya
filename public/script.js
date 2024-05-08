@@ -33,6 +33,8 @@ function guestMouseOverHandler(e) {
 
 }
 
+let isGuestError = false;
+
 function guestClickHandler(e) {
     guests.forEach(guest => {
         if (guest.index <= e.target.index) {
@@ -42,6 +44,10 @@ function guestClickHandler(e) {
         }
     });
     guestsClicked = e.target.index;
+    if (isGuestError) {
+        e.target.parentNode.parentNode.removeChild(document.querySelector(`.error`));
+        isGuestError = false;
+    }
 }
 
 function clearGuests() {
@@ -111,7 +117,7 @@ function checkForm() {
         return false;
     }
     if (guestsClicked === 0) {
-        alert("Выберете количество гостей");
+        createErrorValidation("guests");
         return false;
     }
     return true;
@@ -132,6 +138,11 @@ function createErrorValidation(row) {
     if (row === "phoneNum") {
         errorElement.textContent = "Введите корректный номер телефона (+375XXYYYYYYY)";
         rowName = "phone";
+    } else if (row === "guests") {
+        errorElement.textContent = "Выберете количество гостей";
+        document.querySelector(`#${rowName}-div`).appendChild(errorElement);
+        isGuestError = true;
+        return;
     } else {
         errorElement.textContent = "Укажите это поле";
     }
@@ -141,7 +152,6 @@ function createErrorValidation(row) {
 }
 
 function removeError(e) {
-    console.log("remove")
     if (isError) {
         e.target.parentNode.removeChild(document.querySelector(`.error`));
         formInputs.forEach(input => {
