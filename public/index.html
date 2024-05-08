@@ -588,23 +588,23 @@
     </div>
     <div id="form__wrapper">
         <form id="book-form" method="post" action="http://localhost:3000/submit_book">
-            <div class="form__row">
+            <div class="form__row" id="firstname-div">
                 <label for="firstname">Имя</label>
-                <input type="text" id="firstname" name="firstname" placeholder="Ваше имя">
+                <input class="form__input" type="text" id="firstname" name="firstname" placeholder="Ваше имя">
             </div>
-            <div class="form__row">
+            <div class="form__row" id="lastname-div">
                 <label for="lastname">Фамилия</label>
-                <input type="text" id="lastname" name="lastname" placeholder="Ваша фамилия">
+                <input class="form__input" type="text" id="lastname" name="lastname" placeholder="Ваша фамилия">
             </div>
-            <div class="form__row">
+            <div class="form__row" id="phone-div">
                 <label for="phone">Номер телефона</label>
-                <input type="tel" id="phone" name="phone" placeholder="Ваш телефон">
+                <input class="form__input" type="tel" id="phone" name="phone" placeholder="Ваш телефон">
             </div>
-            <div class="form__row">
+            <div class="form__row" id="date-div">
                 <label for="book-date">На какую дату</label>
-                <input type="datetime-local" id="book-date" name="date">
+                <input class="form__input" type="datetime-local" id="book-date" name="date">
             </div>
-            <div class="form__row">
+            <div class="form__row" id="guests-div">
                 <p>Количество гостей</p>
                 <div id="guests-wrapper">
                     <img class="guest" src="icons/book-people-white.png" alt="гость">

@@ -4,6 +4,7 @@ const unbookedGuest = "icons/book-people-white.png";
 const bookedGuest = "icons/book-people-black.png";
 
 let guestsClicked = 0;
+let isError = false;
 
 guestWrapper.addEventListener("mouseleave", () => {
     guests.forEach(guest => {
@@ -50,6 +51,11 @@ function clearGuests() {
     })
 }
 
+const formInputs = document.querySelectorAll(".form__input");
+formInputs.forEach(input => {
+    input.addEventListener("input", removeError)
+})
+
 document.querySelector("#book-form").addEventListener("submit", formSubmitHandler);
 
 function formSubmitHandler(e) {
@@ -86,22 +92,22 @@ function formSubmitHandler(e) {
 
 function checkForm() {
     if (document.querySelector("#firstname").value === "") {
-        alert("Поле Имя должно быть заполнено");
+        createErrorValidation("firstname");
         return false;
     }
     if (document.querySelector("#lastname").value === "") {
-        alert("Поле Фамилия должно быть заполнено");
+        createErrorValidation("lastname");
         return false;
     }
     if (document.querySelector("#phone").value === "") {
-        alert("Поле Телефон должно быть заполнено");
+        createErrorValidation("phone");
         return false;
     } else if (!checkPhone(document.querySelector("#phone").value)) {
         alert("Введите корректный номер телефона (+375XXYYYYYYY)");
         return false;
     }
     if (document.querySelector("#book-date").value === "") {
-        alert("Поле Дата должно быть заполнено");
+        createErrorValidation("date");
         return false;
     }
     if (guestsClicked === 0) {
@@ -114,6 +120,22 @@ function checkForm() {
 function checkPhone(phone) {
     const phoneReg = /^\+375(29|33|44)\d{7}$/;
     return phoneReg.test(phone);
+}
+
+function createErrorValidation(row) {
+    const errorElement = document.createElement("p");
+    errorElement.classList.add("error");
+    errorElement.textContent = "Укажите это поле";
+    document.querySelector(`#${row}-div`).appendChild(errorElement);
+    isError = true;
+}
+
+function removeError(e) {
+    console.log("remove")
+    if (isError) {
+        e.target.parentNode.removeChild(document.querySelector(`.error`));
+        isError = false;
+    }
 }
 
 function clearForm() {

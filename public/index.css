@@ -27,6 +27,14 @@ a {
     text-align: center;
 }
 
+.error {
+    color: #ff0000;
+}
+
+.input.error {
+    border-color: #ff0000;
+}
+
 /* HEADER START */
 
 header {
