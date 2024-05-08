@@ -43,6 +43,87 @@ function guestClickHandler(e) {
     guestsClicked = e.target.index;
 }
 
+function clearGuests() {
+    guestsClicked = 0;
+    guests.forEach(guest => {
+        guest.src = unbookedGuest;
+    })
+}
+
+document.querySelector("#book-form").addEventListener("submit", formSubmitHandler);
+
+function formSubmitHandler(e) {
+    e.preventDefault();
+
+    if (!checkForm()) {
+        return;
+    }
+
+    const book = {};
+    book.firstname = document.querySelector("#firstname").value;
+    book.lastname = document.querySelector("#lastname").value;
+    book.phone = document.querySelector("#phone").value;
+    book.date = document.querySelector("#book-date").value;
+    book.guests = guestsClicked;
+
+    fetch("http://localhost:3000/submit_book", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(book)
+    }).then(res => {
+        if (res.ok) {
+            alert("Заказ принят");
+        } else {
+            alert("Ошибка сервера");
+        }
+    }).catch(err => {
+        console.log(err);
+    });
+    clearForm();
+}
+
+function checkForm() {
+    if (document.querySelector("#firstname").value === "") {
+        alert("Поле Имя должно быть заполнено");
+        return false;
+    }
+    if (document.querySelector("#lastname").value === "") {
+        alert("Поле Фамилия должно быть заполнено");
+        return false;
+    }
+    if (document.querySelector("#phone").value === "") {
+        alert("Поле Телефон должно быть заполнено");
+        return false;
+    } else if (!checkPhone(document.querySelector("#phone").value)) {
+        alert("Введите корректный номер телефона (+375XXYYYYYYY)");
+        return false;
+    }
+    if (document.querySelector("#book-date").value === "") {
+        alert("Поле Дата должно быть заполнено");
+        return false;
+    }
+    if (guestsClicked === 0) {
+        alert("Выберете количество гостей");
+        return false;
+    }
+    return true;
+}
+
+function checkPhone(phone) {
+    const phoneReg = /^\+375(29|33|44)\d{7}$/;
+    return phoneReg.test(phone);
+}
+
+function clearForm() {
+    document.querySelector("#firstname").value = "";
+    document.querySelector("#lastname").value = "";
+    document.querySelector("#phone").value = "";
+    document.querySelector("#book-date").value = "";
+    clearGuests();
+}
+
 const nextSlide = document.querySelector(".next");
 const prevSlide = document.querySelector(".prev");
 const dots = document.querySelectorAll(".dots");
@@ -57,12 +138,10 @@ dots.forEach((dot, index) => {
 let slideIndex = 1;
 showSlides(slideIndex);
 
-// Next/previous controls
 function plusSlides(n) {
     showSlides(slideIndex += n);
 }
 
-// Thumbnail image controls
 function currentSlide(n) {
     showSlides(slideIndex = n);
 }

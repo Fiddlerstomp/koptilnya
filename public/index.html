@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Ресторан "КОПТИЛЬНЯ"</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
 </head>
 <body>
 <header>
@@ -586,22 +587,22 @@
         </div>
     </div>
     <div id="form__wrapper">
-        <form>
+        <form id="book-form" method="post" action="http://localhost:3000/submit_book">
             <div class="form__row">
-                <label for="fname">Имя</label>
-                <input type="text" id="fname" name="firstname" placeholder="Ваше имя">
+                <label for="firstname">Имя</label>
+                <input type="text" id="firstname" name="firstname" placeholder="Ваше имя">
             </div>
             <div class="form__row">
-                <label for="lname">Фамилия</label>
-                <input type="text" id="lname" name="lastname" placeholder="Ваша фамилия">
+                <label for="lastname">Фамилия</label>
+                <input type="text" id="lastname" name="lastname" placeholder="Ваша фамилия">
             </div>
             <div class="form__row">
                 <label for="phone">Номер телефона</label>
-                <input type="tel" id="phone" name="phone-number" placeholder="Ваш телефон">
+                <input type="tel" id="phone" name="phone" placeholder="Ваш телефон">
             </div>
             <div class="form__row">
                 <label for="book-date">На какую дату</label>
-                <input type="datetime-local" id="book-date" name="book-date">
+                <input type="datetime-local" id="book-date" name="date">
             </div>
             <div class="form__row">
                 <p>Количество гостей</p>
