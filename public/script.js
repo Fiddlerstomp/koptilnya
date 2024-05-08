@@ -82,3 +82,32 @@ function showSlides(n) {
     slides[slideIndex-1].style.display = "block";
     dots[slideIndex-1].className += " active";
 }
+
+//shrink header
+
+// document.addEventListener('DOMContentLoaded', function () {
+//     const header = document.querySelector('header');
+//     let prevScrollPos = window.scrollY;
+//
+//     window.addEventListener('scroll', function () {
+//         const currentScrollPos = window.scrollY;
+//
+//         if (prevScrollPos > currentScrollPos) {
+//             // Прокрутка вверх
+//             header.classList.remove('shrink');
+//         } else {
+//             // Прокрутка вниз
+//             header.classList.add('shrink');
+//         }
+//
+//         prevScrollPos = currentScrollPos;
+//     });
+// });
+window.addEventListener("scroll", () => {
+    const header = document.querySelector("header");
+    if (scrollY > 100) {
+        header.classList.add("shrink");
+    } else {
+        header.classList.remove("shrink");
+    }
+})
