@@ -81,6 +81,10 @@ function showSlides(n) {
     }
     slides[slideIndex-1].style.display = "block";
     dots[slideIndex-1].className += " active";
+    setTimeout(() => {
+        slideIndex = slideIndex === 4 ? 1 : slideIndex+1;
+        showSlides(slideIndex);
+    }, 3000);
 }
 
 //shrink header
