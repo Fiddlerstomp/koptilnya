@@ -88,6 +88,10 @@ header.shrink {
     transform: scaleX(1);
 }
 
+.nav__link.active-link::after {
+    transform: scaleX(1);
+}
+
 /* HEADER END */
 
 /* ABOUT START */

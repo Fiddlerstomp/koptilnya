@@ -85,24 +85,6 @@ function showSlides(n) {
 
 //shrink header
 
-// document.addEventListener('DOMContentLoaded', function () {
-//     const header = document.querySelector('header');
-//     let prevScrollPos = window.scrollY;
-//
-//     window.addEventListener('scroll', function () {
-//         const currentScrollPos = window.scrollY;
-//
-//         if (prevScrollPos > currentScrollPos) {
-//             // Прокрутка вверх
-//             header.classList.remove('shrink');
-//         } else {
-//             // Прокрутка вниз
-//             header.classList.add('shrink');
-//         }
-//
-//         prevScrollPos = currentScrollPos;
-//     });
-// });
 window.addEventListener("scroll", () => {
     const header = document.querySelector("header");
     if (scrollY > 100) {
@@ -111,3 +93,32 @@ window.addEventListener("scroll", () => {
         header.classList.remove("shrink");
     }
 })
+
+//active header
+
+window.addEventListener('scroll', function() {
+    let sections = document.querySelectorAll('section');
+    let navLinks = document.querySelectorAll('nav a');
+
+    sections.forEach(function(section) {
+        let top = section.offsetTop - 400;
+        let bottom = top + section.offsetHeight;
+        const isDown = (window.innerHeight + window.scrollY) >= document.body.offsetHeight;
+
+        if (window.scrollY >= top && window.scrollY <= bottom && !isDown) {
+            navLinks.forEach(function(link) {
+                link.classList.remove('active-link');
+            });
+
+            let link = document.querySelector('nav a[href="#' + section.id + '"]');
+            link.classList.add('active-link');
+        } else if (isDown) {
+            navLinks.forEach(function(link) {
+                link.classList.remove('active-link');
+            });
+
+            let link = document.querySelector('nav a[href="#footer-wrapper"]');
+            link.classList.add('active-link');
+        }
+    });
+});
